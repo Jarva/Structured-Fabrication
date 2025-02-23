@@ -4,12 +4,16 @@
     "facade": {
       "parent": "sf:block/facade"
     },
+    "overlay": {
+      "parent": "sf:block/facade_overlay"
+    },
     "face": {
       "parent": "sf:block/controller_face"
     }
   },
   "item_render_order": [
     "facade",
+    "overlay",
     "face"
   ],
   "loader": "neoforge:composite",
