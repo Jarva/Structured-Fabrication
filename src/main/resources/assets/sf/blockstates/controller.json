@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "sf:block/controller"
+    },
+    "facing=east": {
+      "model": "sf:block/controller",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "sf:block/controller",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "sf:block/controller",
+      "y": 270
+    }
+  }
+}

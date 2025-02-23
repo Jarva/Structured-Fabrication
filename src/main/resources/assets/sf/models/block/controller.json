@@ -1,0 +1,19 @@
+{
+  "parent": "minecraft:block/block",
+  "children": {
+    "facade": {
+      "parent": "sf:block/facade"
+    },
+    "face": {
+      "parent": "sf:block/controller_face"
+    }
+  },
+  "item_render_order": [
+    "facade",
+    "face"
+  ],
+  "loader": "neoforge:composite",
+  "textures": {
+    "particle": "sf:block/machine_casing"
+  }
+}

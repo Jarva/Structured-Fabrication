@@ -1,0 +1,6 @@
+{
+  "loader": "sf:facade",
+  "model": {
+    "parent": "sf:block/machine_casing"
+  }
+}

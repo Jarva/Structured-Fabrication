@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.github.jarva.sf.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "refmap": "sf.refmap.json",
+  "mixins": [
+    "StructureTemplateAccessor"
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

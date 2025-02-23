@@ -1,0 +1,12 @@
+{
+  "block.sf.controller": "Controller",
+  "block.sf.resource_hatch": "Resource Hatch",
+  "block.sf.resource_hatch.bound": "%s %s %s Hatch",
+  "hatch_io.sf.input": "Input",
+  "hatch_io.sf.output": "Output",
+  "hatch_tier.sf.copper": "Copper",
+  "label.sf.base": "Base %s",
+  "resource_type.sf.energy": "Energy",
+  "resource_type.sf.fluid": "Fluid",
+  "resource_type.sf.item": "Item"
+}
