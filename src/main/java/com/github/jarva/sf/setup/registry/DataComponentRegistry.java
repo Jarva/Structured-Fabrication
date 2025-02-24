@@ -10,6 +10,11 @@ import com.github.jarva.sf.common.machines.Machine;
 import net.minecraft.core.Holder;
 import net.minecraft.core.component.DataComponentType;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.network.FriendlyByteBuf;
+import net.minecraft.network.RegistryFriendlyByteBuf;
+import net.minecraft.network.codec.ByteBufCodecs;
+import net.minecraft.network.codec.StreamCodec;
+import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
@@ -27,5 +32,10 @@ public class DataComponentRegistry {
     );
     public static final DeferredHolder<DataComponentType<?>, DataComponentType<HatchIO>> HATCH_IO = DATA_COMPONENTS.register("hatch_io",
             () -> DataComponentType.<HatchIO>builder().persistent(HatchIO.CODEC).build()
+    );
+
+    private static final StreamCodec<RegistryFriendlyByteBuf, BlockState> BLOCKSTATE_STREAM_CODEC = ByteBufCodecs.fromCodecWithRegistries(BlockState.CODEC);
+    public static final DeferredHolder<DataComponentType<?>, DataComponentType<BlockState>> FACADE_STATE = DATA_COMPONENTS.register("facade",
+            () -> DataComponentType.<BlockState>builder().persistent(BlockState.CODEC).networkSynchronized(BLOCKSTATE_STREAM_CODEC).build()
     );
 }

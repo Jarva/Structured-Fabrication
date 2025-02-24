@@ -22,7 +22,7 @@ public class FacadeGeometry implements IUnbakedGeometry<FacadeGeometry> {
     }
 
     @Override
-    public BakedModel bake(IGeometryBakingContext iGeometryBakingContext, ModelBaker modelBaker, Function<Material, TextureAtlasSprite> function, ModelState modelState, ItemOverrides itemOverrides) {
+    public BakedModel bake(IGeometryBakingContext context, ModelBaker modelBaker, Function<Material, TextureAtlasSprite> function, ModelState modelState, ItemOverrides itemOverrides) {
         return new FacadeModel(this.base.bake(modelBaker, function, modelState));
     }
 
