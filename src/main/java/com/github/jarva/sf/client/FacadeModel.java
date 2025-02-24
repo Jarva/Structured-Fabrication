@@ -100,31 +100,31 @@ public class FacadeModel implements IDynamicBakedModel {
         return ItemOverrides.EMPTY;
     }
 
-    @Override
-    public ItemTransforms getTransforms() {
-        return StructuredFabricationClient.modelOf(StructuredFabricationClient.MACHINE_CASING).getTransforms();
-    }
-
-    @Override
-    public List<RenderType> getRenderTypes(ItemStack itemStack, boolean fabulous) {
-        BlockState state = itemStack.get(DataComponentRegistry.FACADE_STATE);
-        if (state == null) {
-            return List.of(RenderType.solid());
-        }
-
-        return Minecraft.getInstance()
-                .getItemRenderer()
-                .getModel(state.getBlock().asItem().getDefaultInstance(), null, null, 0)
-                .getRenderTypes(itemStack, fabulous);
-    }
-
-    @Override
-    public @NotNull List<BakedModel> getRenderPasses(ItemStack itemStack, boolean fabulous) {
-        @Nullable BlockState state = itemStack.get(DataComponentRegistry.FACADE_STATE);
-        if (state == null) {
-            return List.of(this);
-        }
-
-        return List.of(new FacadeModel(base, state));
-    }
+//    @Override
+//    public ItemTransforms getTransforms() {
+//        return StructuredFabricationClient.modelOf(StructuredFabricationClient.MACHINE_CASING).getTransforms();
+//    }
+//
+//    @Override
+//    public List<RenderType> getRenderTypes(ItemStack itemStack, boolean fabulous) {
+//        BlockState state = itemStack.get(DataComponentRegistry.FACADE_STATE);
+//        if (state == null) {
+//            return List.of(RenderType.solid());
+//        }
+//
+//        return Minecraft.getInstance()
+//                .getItemRenderer()
+//                .getModel(state.getBlock().asItem().getDefaultInstance(), null, null, 0)
+//                .getRenderTypes(itemStack, fabulous);
+//    }
+//
+//    @Override
+//    public @NotNull List<BakedModel> getRenderPasses(ItemStack itemStack, boolean fabulous) {
+//        @Nullable BlockState state = itemStack.get(DataComponentRegistry.FACADE_STATE);
+//        if (state == null) {
+//            return List.of(this);
+//        }
+//
+//        return List.of(new FacadeModel(base, state));
+//    }
 }
